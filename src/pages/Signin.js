@@ -18,8 +18,10 @@ export default function SignIn() {
 
       console.log("Response: ", response);
 
-      localStorage.setItem("line::user", JSON.stringify(response.data));
-      // localStorage.setItem('line::session', 'zzz')
+      const user = JSON.stringify(response.data);
+
+      localStorage.setItem("line::user", user);
+      localStorage.setItem("line::token", response.data.token);
 
       history.push("/");
     } catch (error) {
