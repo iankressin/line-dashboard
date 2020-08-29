@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import Nps from "../components/Nps";
 import UsersTable from "../components/UsersTable";
 import ScoreChart from "../components/ScoreChart";
 
@@ -66,7 +67,12 @@ function Home() {
 
   return (
     <>
-      <ScoreChart data={scoreData} onBarClick={onBarClick} />
+      <div class="flex my-5">
+        <div class="mx-5">
+          <ScoreChart data={scoreData} onBarClick={onBarClick} />
+        </div>
+        <Nps />
+      </div>
       <UsersTable title={`Score ${selectedScore}`} userData={userScore} />
     </>
   );
