@@ -24,7 +24,10 @@ const Nps = () => {
   };
 
   return (
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div
+      class="max-w-sm rounded overflow-hidden shadow-lg"
+      style={{ width: 400, height: 380 }}
+    >
       <div class="text-center font-bold text-xl mb-2">NPS</div>
       <div class="px-6 py-4 text-center justify-center align-center flex-column">
         <p class="text-gray-700 text-base text-center mb-3">

@@ -10,8 +10,11 @@ import {
 
 const ScoreChart = ({ data, onBarClick }) => {
   return (
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <div class="text-center font-bold text-xl mb-2">Todas avaliações</div>
+    <div
+      class="max-w-sm rounded overflow-hidden shadow-lg w-64"
+      style={{ width: 400, height: 380 }}
+    >
+      <div class="text-center font-bold text-xl mb-2">Avaliações</div>
       <XYPlot margin={{ bottom: 70 }} xType="ordinal" width={300} height={300}>
         <VerticalGridLines />
         <HorizontalGridLines />

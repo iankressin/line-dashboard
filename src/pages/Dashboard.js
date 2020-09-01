@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Nps from "../components/Nps";
+import PlaceData from "../components/PlaceData";
 import UsersTable from "../components/UsersTable";
 import ScoreChart from "../components/ScoreChart";
 
@@ -67,11 +68,16 @@ function Home() {
 
   return (
     <>
-      <div class="flex my-5">
+      <div class="flex justify-center my-10">
         <div class="mx-5">
           <ScoreChart data={scoreData} onBarClick={onBarClick} />
         </div>
-        <Nps />
+        <div class="mx-5">
+          <Nps />
+        </div>
+        <div class="mx-5">
+          <PlaceData />
+        </div>
       </div>
       <UsersTable title={`Score ${selectedScore}`} userData={userScore} />
     </>
